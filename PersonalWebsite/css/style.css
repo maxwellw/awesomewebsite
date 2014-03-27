@@ -151,8 +151,26 @@ a
 	float: right;
 }
 
+.contactTitle {
+	font-size: 3em;
+	line-height: 3em;
+	text-align: center;
+}
+
+.contactImages {
+	margin-top: 2em;
+	
+}
+
+.contactImages > li {
+	display: inline-block;
+	margin: 0 30px 0;
+	float: none; 
+	vertical-align: top;
+}
+
 .bigImage {
-	margin-bottom: 100px;
+
 }
 
 .footer {

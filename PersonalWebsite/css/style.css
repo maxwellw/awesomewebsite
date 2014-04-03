@@ -71,6 +71,7 @@ a.fileLink {
 	font-size: 1.6em;
 }
 
+
 .container {
 	padding-left: 1.8em;
 	padding-right: 1.8em;
@@ -173,8 +174,21 @@ a.fileLink {
 	vertical-align: top;
 }
 
-.bigImage {
 
+.projectText {
+	color: #FA9D00;
+	font-size: 2em;
+}
+
+.projectSubtext {
+	font-size: 1.1em;
+	word-spacing: .1em;
+	color: #FFBD00;
+	margin: -1.8em 0em .8em 3em;
+}
+
+.bigImage {
+	width: 100%;
 }
 
 .footer {

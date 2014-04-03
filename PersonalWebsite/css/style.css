@@ -61,6 +61,10 @@ a
 	text-decoration: none;
 }
 
+a.fileLink {
+	color: #FA9D00;
+}
+
 .subtitle {
   color: #FA9D00;
 	text-align: right;
@@ -146,7 +150,7 @@ a
 	float: left;
 }
 
-.aboutSection {
+.descriptionSection {
 	width: 60%;
 	float: right;
 }

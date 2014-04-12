@@ -41,6 +41,16 @@ var PageTransitions = (function () {
             $pageTrigger = $(this);
             Animate($pageTrigger);
         });
+				
+				 $('.projectImage').click(function() {
+            $pageTrigger = $(this);
+            Animate($pageTrigger);
+						 $('.body').css("overflow", "hidden");
+						 $('.pt-page-2').css("height","auto");
+						 
+						 setTimeout(function () {$('.pt-page-1').css("height","0px"); 
+						 $('.body').css("overflow", "visible"); }, 500);
+        });
     }
 
     // All pt-trigger click event calls this function

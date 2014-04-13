@@ -46,19 +46,59 @@ var PageTransitions = (function () {
             $pageTrigger = $(this);
             Animate($pageTrigger);
         });
+				 
+				
+				 $('.backImage').click(function() {
+						 $pageTrigger = $('.buttonRef');
+            Animate($pageTrigger);
+						
+						 var scrollTop = $(window).scrollTop();
+						 $('.pt-page-1').css("margin-top",scrollTop);
+						 $('.pt-page-1').css("height","auto");
+						 $('.backButton').css("visibility", "hidden");
+						 
+						 setTimeout(function () {
+								zeroHeights(); 
+								$('.pt-page-1').css("margin-top","0");
+								
+							}, 500);
+				 });
 				
 				 $('#link1-2').click(function() {
+						 var scrollTop = $(window).scrollTop();
+						 $('.pt-page-2').css("margin-top",scrollTop);
 						 $('.pt-page-2').css("height","auto");
+						 $('.backButton').css("visibility", "visible");
 						 
-						 setTimeout(function () {$('.pt-page-1').css("height","0px");}, 500);
+						 setTimeout(function () {
+								$('.pt-page-1').css("height","0px"); 
+								$('.pt-page-2').css("margin-top","0");
+								$(window).scrollTop(0);
+							}, 500);
 				 });
 				 
 				 $('#link2-1').click(function() {
+						 var scrollTop = $(window).scrollTop();
+						 $('.pt-page-1').css("margin-top",scrollTop);
 						 $('.pt-page-1').css("height","auto");
 						 
-						 setTimeout(function () {$('.pt-page-2').css("height","0px");}, 500);
+						 setTimeout(function () {
+								$('.pt-page-2').css("height","0px"); 
+								$('.pt-page-1').css("margin-top","0");
+						 }, 500);
 				 });
     }
+
+		function zeroHeights() {
+			var $pageWrapper = $('.pt-wrapper');
+		  var currentPageIndex = $pageWrapper.data('current'),
+            $pages = $pageWrapper.children('div.pt-page'),
+            pagesCount = $pages.length;
+		  for(var i = 2; i < pagesCount; i++) {
+				($pages.eq(i)).css("height","0");
+				
+			}
+		}
 
     // All pt-trigger click event calls this function
     // This function gets the animation id, goto page that we define in `data-animation` and 'data-goto' repectively.

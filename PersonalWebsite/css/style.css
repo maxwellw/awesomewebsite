@@ -288,8 +288,18 @@ a.fileLink {
 }
 
 .projectPicture{
+	cursor: pointer;
 	width: 900px;
 	height: 200px;
+}
+
+.backButton {
+	width: 60px;
+	opacity: .5;
+	position: fixed;
+	bottom: 100px;
+	left: 0px;
+	visibility: hidden;
 }
 
 .bigImage {

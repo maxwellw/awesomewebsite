@@ -1,6 +1,6 @@
 
 .pt-wrapper {
-    position: relative;
+	
     -webkit-perspective: 1200px;
     -moz-perspective: 1200px;
     perspective: 1200px;

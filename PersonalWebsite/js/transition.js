@@ -45,12 +45,19 @@ var PageTransitions = (function () {
 				 $('.projectImage').click(function() {
             $pageTrigger = $(this);
             Animate($pageTrigger);
-						 $('.body').css("overflow", "hidden");
+        });
+				
+				 $('#link1-2').click(function() {
 						 $('.pt-page-2').css("height","auto");
 						 
-						 setTimeout(function () {$('.pt-page-1').css("height","0px"); 
-						 $('.body').css("overflow", "visible"); }, 500);
-        });
+						 setTimeout(function () {$('.pt-page-1').css("height","0px");}, 500);
+				 });
+				 
+				 $('#link2-1').click(function() {
+						 $('.pt-page-1').css("height","auto");
+						 
+						 setTimeout(function () {$('.pt-page-2').css("height","0px");}, 500);
+				 });
     }
 
     // All pt-trigger click event calls this function

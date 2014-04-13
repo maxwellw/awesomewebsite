@@ -22,6 +22,7 @@ var PageTransitions = (function () {
 
     function init() {
 
+				 
         // Get all the .pt-page div.
         $('.pt-page').each( function() {
             var $page = $(this);
@@ -60,7 +61,7 @@ var PageTransitions = (function () {
 						 setTimeout(function () {
 								zeroHeights(); 
 								$('.pt-page-1').css("margin-top","0");
-								
+								$(window).scrollTop(0);
 							}, 500);
 				 });
 				
@@ -68,9 +69,10 @@ var PageTransitions = (function () {
 						 var scrollTop = $(window).scrollTop();
 						 $('.pt-page-2').css("margin-top",scrollTop);
 						 $('.pt-page-2').css("height","auto");
-						 $('.backButton').css("visibility", "visible");
+						 
 						 
 						 setTimeout(function () {
+								$('.backButton').css("visibility", "visible");
 								$('.pt-page-1').css("height","0px"); 
 								$('.pt-page-2').css("margin-top","0");
 								$(window).scrollTop(0);
@@ -94,7 +96,7 @@ var PageTransitions = (function () {
 		  var currentPageIndex = $pageWrapper.data('current'),
             $pages = $pageWrapper.children('div.pt-page'),
             pagesCount = $pages.length;
-		  for(var i = 2; i < pagesCount; i++) {
+		  for(var i = 1; i < pagesCount; i++) {
 				($pages.eq(i)).css("height","0");
 				
 			}
@@ -522,4 +524,5 @@ var PageTransitions = (function () {
 $(document).ready(function() {
     // initializing page transition.
     PageTransitions.init();
+		
 });

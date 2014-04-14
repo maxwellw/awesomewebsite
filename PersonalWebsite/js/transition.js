@@ -50,11 +50,18 @@ var PageTransitions = (function () {
 				 
 				
 				 $('.backImage').click(function() {
+						 var currentPageIndex = $('.pt-wrapper').data('current'),
+						 $pages = $('.pt-wrapper').children('div.pt-page');
+						 
+						 currScroll = $(window).scrollTop();
+						 
+						 $currPage = $pages.eq(currentPageIndex);
+						 $currPage.css("margin-top", scrollTop-currScroll);
+						 $(window).scrollTop(scrollTop);
+						 
 						 $pageTrigger = $('.buttonRef');
-            Animate($pageTrigger);
+						 Animate($pageTrigger);
 						 $('.pt-page-1').css("margin-top","0");
-						 
-						 
 						 
 						 $('.pt-page-1').css("height","auto");
 						 $('.backButton').css("visibility", "hidden");
@@ -201,7 +208,7 @@ var PageTransitions = (function () {
             pagesCount = $pages.length;
 		  for(var i = 1; i < pagesCount; i++) {
 				($pages.eq(i)).css("height","0");
-				
+				($pages.eq(i)).css("margin-top","0");
 			}
 		}
 

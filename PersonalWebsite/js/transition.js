@@ -22,7 +22,7 @@ var PageTransitions = (function () {
 
     function init() {
 
-				 
+				 var scrollTop = 0;
         // Get all the .pt-page div.
         $('.pt-page').each( function() {
             var $page = $(this);
@@ -52,21 +52,22 @@ var PageTransitions = (function () {
 				 $('.backImage').click(function() {
 						 $pageTrigger = $('.buttonRef');
             Animate($pageTrigger);
-						
-						 var scrollTop = $(window).scrollTop();
-						 $('.pt-page-1').css("margin-top",scrollTop);
+						 $('.pt-page-1').css("margin-top","0");
+						 
+						 
+						 
 						 $('.pt-page-1').css("height","auto");
 						 $('.backButton').css("visibility", "hidden");
-						 
+						 $(window).scrollTop(scrollTop);
 						 setTimeout(function () {
 								zeroHeights(); 
 								$('.pt-page-1').css("margin-top","0");
-								$(window).scrollTop(0);
+								
 							}, 500);
 				 });
 				
 				 $('#link1-2').click(function() {
-						 var scrollTop = $(window).scrollTop();
+						 scrollTop = $(window).scrollTop();
 						 $('.pt-page-2').css("margin-top",scrollTop);
 						 $('.pt-page-2').css("height","auto");
 						 
@@ -80,7 +81,7 @@ var PageTransitions = (function () {
 				 });
 				 
 				 $('#link1-3').click(function() {
-						 var scrollTop = $(window).scrollTop();
+						 scrollTop = $(window).scrollTop();
 						 $('.pt-page-3').css("margin-top",scrollTop);
 						 $('.pt-page-3').css("height","auto");
 						 
@@ -94,7 +95,7 @@ var PageTransitions = (function () {
 				 });
 				 
 				 $('#link1-4').click(function() {
-						 var scrollTop = $(window).scrollTop();
+						 scrollTop = $(window).scrollTop();
 						 $('.pt-page-4').css("margin-top",scrollTop);
 						 $('.pt-page-4').css("height","auto");
 						 
@@ -108,7 +109,7 @@ var PageTransitions = (function () {
 				 });
 				 
 				 $('#link1-5').click(function() {
-						 var scrollTop = $(window).scrollTop();
+						 scrollTop = $(window).scrollTop();
 						 $('.pt-page-5').css("margin-top",scrollTop);
 						 $('.pt-page-5').css("height","auto");
 						 
@@ -122,7 +123,7 @@ var PageTransitions = (function () {
 				 });
 				 
 				 $('#link1-6').click(function() {
-						 var scrollTop = $(window).scrollTop();
+						 scrollTop = $(window).scrollTop();
 						 $('.pt-page-6').css("margin-top",scrollTop);
 						 $('.pt-page-6').css("height","auto");
 						 
@@ -136,7 +137,7 @@ var PageTransitions = (function () {
 				 });
 				 
 				 $('#link1-7').click(function() {
-						 var scrollTop = $(window).scrollTop();
+						 scrollTop = $(window).scrollTop();
 						 $('.pt-page-7').css("margin-top",scrollTop);
 						 $('.pt-page-7').css("height","auto");
 						 
@@ -150,7 +151,7 @@ var PageTransitions = (function () {
 				 });
 				 
 				 $('#link1-8').click(function() {
-						 var scrollTop = $(window).scrollTop();
+						 scrollTop = $(window).scrollTop();
 						 $('.pt-page-8').css("margin-top",scrollTop);
 						 $('.pt-page-8').css("height","auto");
 						 
@@ -164,7 +165,7 @@ var PageTransitions = (function () {
 				 });
 				 
 				 $('#link1-9').click(function() {
-						 var scrollTop = $(window).scrollTop();
+						 scrollTop = $(window).scrollTop();
 						 $('.pt-page-9').css("margin-top",scrollTop);
 						 $('.pt-page-9').css("height","auto");
 						 
@@ -178,7 +179,7 @@ var PageTransitions = (function () {
 				 });
 				 
 				 $('#link1-10').click(function() {
-						 var scrollTop = $(window).scrollTop();
+						 scrollTop = $(window).scrollTop();
 						 $('.pt-page-10').css("margin-top",scrollTop);
 						 $('.pt-page-10').css("height","auto");
 						 

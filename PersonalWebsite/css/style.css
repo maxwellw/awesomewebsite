@@ -284,7 +284,7 @@ a.fileLink {
 }
 
 .projectImage {
-	
+	cursor: pointer;
 }
 
 .projectPicture{
@@ -300,6 +300,7 @@ a.fileLink {
 	bottom: 100px;
 	left: 0px;
 	visibility: hidden;
+	cursor: pointer;
 }
 
 .bigImage {

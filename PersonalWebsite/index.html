@@ -436,20 +436,56 @@
 				<div class="row" style="margin-top: 100px;">
 					<div class="descriptionSection">
 						<p class="subtitle">
-							CS229
+							CS229: Machine Learning applied to Poker
 						</p>
 						
 						<p>
-						
+							In Andrew Ng's Machine Learning class, I teamed up with James Bensson and Alex Eckert to try and predict a player's hand strength based on their betting behavior.
 						</p>
 						
 						<p>
+							We believed that there would be a significant connection between a player's betting in a round and how strong their hand at the river is, so we gathered data from both computer poker bots and real human games.
+							After figuring out how to parse each database into formats that we could use, we went to work on extracting features.
+						</p>
+						
+						<p>
+							Our end goal was to predict a player's river "hand rank", which is defined as the percentage of 2 card hands that the player's hand rank would beat. For example, 
+							
+							
+							
+						</p>
+						<p>
+							The player's hand rank is .838, which means his hand will beat 83.8% of other possible hands. 
+							However, there are still 16.2% of hands that his pair of aces will lose to, such as two pairs, three of a kind, straights, and so on.
+						</p>
+						<p>
+							At first, we kept our features extremely simple:
+							
+							<ul>
+								<li>Number of checks before the river</li>
+								<li>Number of calls before the river</li>
+								<li>Number of bets before the river</li>
+								<li>Number of raises before the river</li>
+							</ul>
+							
+							But as we interperted more data, we added on:
+							
+							<ul>
+								<li>Value of bets/raises compared to the current pot amount</li>
+								<li>Ratios of aggressive moves to defensive moves</li>
+								<li>Average bet in each round compared to the pot amount</li>
+							</ul>
+							
+							We found that the value of bets/raises improved our model a lot, and especially for the Naive Bayes model.
 							
 						</p>
 						
 						<p>
-							
-							
+							In the end, we had a Naive Bayes algorithm coupled with clustering that could predict the exact bin (out of 6) a player's river hand was in 60% of the time, and the average bin error was less than 1 bin.
+						</p>
+						
+						<p>
+							Check out the report <a class="fileLink" href="finalpaper.pdf">here</a>.
 						</p>
 					</div>
 				</div>
@@ -473,18 +509,17 @@
 						</p>
 						
 						<p>
-							ME218A at Stanford was the beginning of the graduate mechatronics series at Stanford and covered the basic circuits, embedded programming, and more mechatronics concepts.
-							For the last third of the class, My team (Dustin Gerrard, Abhishek Sahasrabudhe, Michelle Tsai) and I were tasked with creating a Batman-themed arcade game in three weeks. 
+							For the final project in Mechanical Systems Design, my team and I created a animatronic Hippogriff that would walk and flap its wings (but sadly not fly). 
+							We used real gears and sprockets from McMaster to create the drivetrain and used D-shafts and set screw to connect everything to the axles. 
 						</p>
 						
 						<p>
-							Our two-player cooperative puzzle/interactive game incorporated and reacted to IR sensors and receivers, analog dials, buttons, and touch sensors to detect user inputs and advance through the adventure.
-							The system's brains were two Freescale C32 class micro-controllers that controlled each player's sensors and actuators and then communicated with each other to play through the game.
+							
 						</p>
 						
 						<p>
-							Check out the website <a class="fileLink" href="http://me218nanana.weebly.com/index.html">here</a>. 
-							Read about the project description <a class="fileLink" href="me218aprojectdescription12.pdf">here</a>.
+							
+							Check out the report <a class="fileLink" href="Hippogriff.pdf">here</a>.
 						</p>
 					</div>
 				</div>
@@ -507,19 +542,15 @@
 							ME112: Lego Climber
 						</p>
 						
-						<p>
-							ME218A at Stanford was the beginning of the graduate mechatronics series at Stanford and covered the basic circuits, embedded programming, and more mechatronics concepts.
-							For the last third of the class, My team (Dustin Gerrard, Abhishek Sahasrabudhe, Michelle Tsai) and I were tasked with creating a Batman-themed arcade game in three weeks. 
+						<p> 
+							In this project, my team and I used our learned knowledge about gear trains, motor curves, and efficiency to construct a parallel wall climber out of legos. We got to optimize the consistency and power consumption of our climber and see it perform during the final presentation.
 						</p>
 						
 						<p>
-							Our two-player cooperative puzzle/interactive game incorporated and reacted to IR sensors and receivers, analog dials, buttons, and touch sensors to detect user inputs and advance through the adventure.
-							The system's brains were two Freescale C32 class micro-controllers that controlled each player's sensors and actuators and then communicated with each other to play through the game.
 						</p>
 						
 						<p>
-							Check out the website <a class="fileLink" href="http://me218nanana.weebly.com/index.html">here</a>. 
-							Read about the project description <a class="fileLink" href="me218aprojectdescription12.pdf">here</a>.
+							Check out the report <a class="fileLink" href="The Sorcerer's Gears.pdf">here</a>.
 						</p>
 					</div>
 				</div>
@@ -539,22 +570,21 @@
 				<div class="row" style="margin-top: 100px;">
 					<div class="descriptionSection">
 						<p class="subtitle">
-							ME113: Lego Climber
+							ME113: Neurosky Controlled Robot
 						</p>
 						
 						<p>
-							ME218A at Stanford was the beginning of the graduate mechatronics series at Stanford and covered the basic circuits, embedded programming, and more mechatronics concepts.
-							For the last third of the class, My team (Dustin Gerrard, Abhishek Sahasrabudhe, Michelle Tsai) and I were tasked with creating a Batman-themed arcade game in three weeks. 
+							For my senior design corporate project, we were tasked by Neurosky to create a mechanical device that was controlled by their EEG device. 
+							We decided to make a motorized platform that could be controlled solely by someone's head. 
 						</p>
 						
 						<p>
-							Our two-player cooperative puzzle/interactive game incorporated and reacted to IR sensors and receivers, analog dials, buttons, and touch sensors to detect user inputs and advance through the adventure.
-							The system's brains were two Freescale C32 class micro-controllers that controlled each player's sensors and actuators and then communicated with each other to play through the game.
+							While working on the project, we quickly found that the Neurosky was no good for actively controlling any moving device due to the slow refresh rates and difficulty of control of its concentration and meditation measurements.
+							Although it would have been good for data gathering, we could only use it for mode changes and such. We wrote some algorithms using a built in blinking detection system to change state and control modes based on double/triple blinks.
 						</p>
 						
 						<p>
-							Check out the website <a class="fileLink" href="http://me218nanana.weebly.com/index.html">here</a>. 
-							Read about the project description <a class="fileLink" href="me218aprojectdescription12.pdf">here</a>.
+							Check out the report <a class="fileLink" href="">here</a>.
 						</p>
 					</div>
 				</div>
@@ -578,18 +608,12 @@
 						</p>
 						
 						<p>
-							ME218A at Stanford was the beginning of the graduate mechatronics series at Stanford and covered the basic circuits, embedded programming, and more mechatronics concepts.
-							For the last third of the class, My team (Dustin Gerrard, Abhishek Sahasrabudhe, Michelle Tsai) and I were tasked with creating a Batman-themed arcade game in three weeks. 
 						</p>
 						
 						<p>
-							Our two-player cooperative puzzle/interactive game incorporated and reacted to IR sensors and receivers, analog dials, buttons, and touch sensors to detect user inputs and advance through the adventure.
-							The system's brains were two Freescale C32 class micro-controllers that controlled each player's sensors and actuators and then communicated with each other to play through the game.
 						</p>
 						
 						<p>
-							Check out the website <a class="fileLink" href="http://me218nanana.weebly.com/index.html">here</a>. 
-							Read about the project description <a class="fileLink" href="me218aprojectdescription12.pdf">here</a>.
 						</p>
 					</div>
 				</div>
@@ -613,7 +637,7 @@
 						</p>
 						
 						<p>
-						
+							For my capstone thermal/fluids class, we designed and manufactured fuel grains and nozzles to test fire rockets and measure the thrust and specific thrust (thrust/fuel). 
 						</p>
 						
 						<p>
@@ -621,7 +645,7 @@
 						</p>
 						
 						<p>
-							
+							Check out the final presentation <a class="fileLink" href="ME140 Final Presentation">here</a>.
 							
 						</p>
 					</div>

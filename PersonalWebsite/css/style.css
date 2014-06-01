@@ -293,6 +293,19 @@ a.fileLink {
 	height: 200px;
 }
 
+.descriptionImages{
+	width: 40%;
+	float: left;
+}
+
+.descriptionPicture{
+	width: 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+}
+
 .backButton {
 	width: 60px;
 	opacity: .5;
